@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specs</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <img src="images/favicon.ico" alt="">
+            <a href="index.html">Restoration</a>
+            <a href="about.html">History</a>
+            <a href="library.html">Library</a>
+            <a class="active" href="specs.html">Specs</a>
+            <a href="nights.html">NiGHTS</a>
+        </nav>
+    </div>
+    <div class="container">
+        <header></header>
+        <main>
+            <h1>SEGA Saturn Technical Specifications</h1>
+            <p>
+                This is a breakdown of the Sega Saturn's 2D and 3D technical specs. There's a lot of confusion over how it works due to its complexity and this should hopefully disambiguate any confusing facts or rumors that have circulated around. The hardware inside responsible with drawing pixels onto the screen is mainly the VDP1 and VDP2 processers, the capabilities of which and how they are used being detailed in the sections below.
+            </p>
+        </main>
+    <section id="tcol">
+        <section id="col1">
+                <h1 class="col">3D Hardware</h1>
+            <hr>
+            <h2>How Models are Drawn</h2>
+            <p>
+                The Saturn's technology was an adaptation and evolution of the same sprite-based hardware as their prior console, the Mega Drive. As a result, they chose to only have sprites be drawn by hardware rather than triangles like all other 3D-graphics at the time and even today. Since the hardware was made for drawing sprites, all polygons start from a 4-sided shape, or a quad. Due to the lack of triangle drawing, there is no UV mapping on the hardware. All textures must be drawn to account for the distortion of the 4 points or verticies through 3D-space.
+                <br>
+            </p>
+            <hr>
+            <h2>3D Rendering Problems</h2>
+            <p>
+                As previously stated, there's no UV mapping natively on the hardware. This results in a lot of issues. You can't map textures, you can't do reflective effects such as environment mapping, and most famously, you cannot do transparency natively with the 3D parts of the hardware. Despite this, it is still possible to have transparency and reflections by exploiting the unique architecture of the hardware, as well as various hardware registers and quirks, as shown in a handful of titles, such as Sonic R.
+                <br>
+                <br>
+                In this video, programmer Jon Burton goes over how the effect was done for Sonic R.
+                <br>
+                <iframe class="col" src="https://youtube.com/embed/WDJgeuoaSvQ"></iframe>
+                <br>
+            </p>
+        </section>
+        <aside id="col2"> 
+                <h1 class="col">2D Hardware</h1>
+                <hr>
+                <h2>How Sprites are Drawn</h2>
+                <p>
+                    As mentioned in the 3D hardware section, the Saturn architecture is designed to draw sprites first and foremost, however, due to increased memory in the console, it is no longer restricted to a tile-based system like the Mega Drive. You also have more layers than the Mega Drive. What was often done was drawing the gameplay essential graphics such as characters, enemies, and UI using VDP1 and various background and foreground planes using VDP2.
+                    <br>
+                </p>
+                <hr>
+                <h2>2D Rendering Problems</h2>
+                <p>
+                    Due to being built of the 2D-focused Mega Drive, the console is uniquely good at doing 2D games. It was often far better at it than the Playstation, due to better RAM allocation allowing for more frames of animation and higher resolution 2D graphics. A lot of fighting games of the era were better on Saturn due to this, with some using the console's RAM expansions to be nearly 100% accurate to the arcade original. The only problems that the hardware really had in the 2D space were to do with transparency, as mentioned prior. It's capable of transparency, however, in very limited ways that often forced a lot of compromises and difficulties technically to produce.
+                    <br>
+                    <br>
+                    This video goes far more in depth on problems to do with transparency, though its a rather long watch.
+                    <br>
+                    <iframe class="col" src="https://youtube.com/embed/f_OchOV_WDg"></iframe>
+                    <br>
+                </p>
+        </aside>
+    </section>
+        <footer>&copy; 2024, All rights reserved.</footer>
+    </div>
+</body>
+</html>

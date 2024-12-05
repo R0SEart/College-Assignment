@@ -1,0 +1,319 @@
+/* Global Style */
+
+@font-face {
+    font-family: "MingLiUB";
+    src: url("../fonts/mingliub.ttc");
+    }
+    
+    body {
+        background-color: #17132b;
+    }
+
+    #tcol {
+        display: flex;
+    }
+
+    img.gameimage {
+        width: 75%;
+    }
+
+    img {
+        display: block;
+        margin: 8px auto;
+        width: 50%
+    }
+
+    h1 {
+        background-color: #007aff;
+        font-family: 'MingLiUB';
+        color: #27297a;
+    }
+    
+    iframe {
+        width: 640px;
+        height: 480px;
+        display: block;
+        margin: 8px auto;
+        text-align: center;
+        border: 2px solid #1e43dd;
+    }
+
+    h1.col {
+        width: 100%;
+        font-size: 1.75vw;
+        text-align: center;
+    }
+
+    h2, h3 {
+        color: #92a6ce;
+    }
+
+    ul {
+        background-color: #1c1a4b; font-family: 'Times New Roman', Times, serif; color: #92a6ce;
+    }
+
+    p {
+        text-shadow: 0px 1px 1px black;
+        background-color: #1c1a4b;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color:#92a6ce;
+    }
+
+    /* The sidebar itself, other things below are flair */
+    .sidebar {
+        margin-top: 128px;
+        margin: 0;
+        padding: 0;
+        background-color: #17132b;
+        height: 100%;
+        overflow: auto;
+    }
+  
+    /* Sidebar links */
+    .sidebar a {
+        display: block;
+        color: #1e43dd;
+        background-color: #1c1a4b;
+        padding: 16px;
+        text-decoration: none;
+    }
+  
+    /* Currently picked page */
+    .sidebar a.active {
+        background-color: #007aff;
+        color: white;
+    }
+  
+    /* Links on mouse-over */
+    .sidebar a:hover:not(.active) {
+        background-color: #27297a;
+        color: white;
+    }
+
+    footer {
+        background-color: #007aff; 
+        font-family: 'Times New Roman', Times, serif; 
+        color: #27297a
+    }
+
+    hr {
+        height: 2px;
+        background-color: #1e43dd;
+        border:none
+    }
+    
+    a {
+        color : red;
+    }
+
+    /* Mobile Styles */
+
+    @media (min-width: 320px) {
+       
+        nav {
+            text-align: center;
+            padding: 0px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            background-color: #17132b;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        nav li {
+            display: block;
+            margin: 0px;
+        }
+        
+        nav li a {
+            display: block;
+            padding: 0px;
+            margin: 0px;
+            height: 24px;
+            color: #17132b;
+            background-color: #1e43dd;
+            width: 100%;
+            margin-top: 4px;
+        }
+
+        h2, h3 {
+            text-align: center;
+        }
+
+        p {
+            padding: 2px;
+            text-shadow: 0px 1px 1px black;
+            border: 0px;
+            font-size: 3.25vw;
+        }
+
+        img {
+            width: 80%;
+        }
+
+        img.gameimage {
+            width: 90%;
+        }
+
+        #tcol {
+            display: block;
+        }
+    
+        #col1, #col2 {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        h1.col {
+            font-size: 5vw;
+        }
+
+        iframe.col {
+            width: 420px;
+            height: 325px;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+        }
+
+        .sidebar a {
+            float: left;
+            margin-top: 18px;
+        }
+    
+        .sidebar img {
+            float: left;
+            width: 72px;
+        }
+
+        div.container {margin-left: 0;}
+
+    }
+
+    /* Tablet Styles */
+
+@media (min-width: 768px) {
+
+    img {
+        width: 75%;
+    }
+
+    p {
+        font-size: 2vw;
+    }
+
+    img.gameimage {
+        width: 80%;
+    }
+
+    #tcol {
+        display: flex;
+    }
+
+    #col1, #col2 {
+        width: 50%;
+        margin: 2px;
+        padding: 2px;
+    }
+    
+    h1.col {
+        font-size: 3.5vw;
+    }
+
+    iframe.col {
+        width: 320px;
+        height: 240px;
+    }
+    
+    div.container {margin-left: 0;}
+
+}
+
+    /* Desktop Styles */
+
+@media (min-width: 1024px) {
+    
+    img {
+        width: 45%;
+    }
+
+    .gameimage {
+        width: 75%;
+    }
+
+    p {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    hr {
+        display: none;
+    }
+
+    /* The sidebar itself, other things below are flair */
+    .sidebar {
+        margin: 0px;
+        padding: 0px;
+        width: 12vw;
+        background-color: #17132b;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+    }
+  
+    /* Sidebar links */
+    .sidebar a {
+        margin-top: 4px;
+        display: block;
+        color: #1e43dd;
+        background-color: #1c1a4b;
+        padding: 16px;
+        text-decoration: none;
+        float: none;
+    }
+  
+    /* Currently picked page */
+    .sidebar a.active {
+        background-color: #007aff;
+        color: white;
+    }
+  
+    /* Links on hover */
+    .sidebar a:hover:not(.active) {
+        background-color: #27297a;
+        color: white;
+    }
+
+    .sidebar img {
+        float: none;
+
+    }
+
+    div.container {
+        margin-left: 12vw;
+        padding: 1px 8px;
+        height: 100%;
+    }
+
+    #col1, #col2 {
+        width: 50%;
+        margin: 8px;
+        padding: 8px;
+    }
+
+    h1.col {
+        font-size: 2vw;
+    }
+
+    iframe.col {
+        width: 420px;
+        height: 315px;
+    }
+
+}
